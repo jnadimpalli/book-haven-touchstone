@@ -8,224 +8,146 @@
     /* Reset & global */
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-      font-family: Arial, sans-serif;
+      background: #FFF7EE;
+      color: #131C26;
+      font-family: 'Calibri', sans-serif;
+      font-size: 16px;
       line-height: 1.4;
       text-align: center;
-      color: #333;
     }
 
-    /* Sticky header */
+    /* Typography */
+    h1 { font-family: 'Trebuchet MS', sans-serif; font-size: 40px; font-weight: bold; color: #FFF7EE; }
+    h2 { font-family: 'Times New Roman', serif; font-size: 30px; font-weight: bold; color: #131C26; }
+    h3 { font-family: 'Impact', sans-serif; font-size: 25px; font-weight: bold; color: #131C26; }
+    h4, p, .info-box, .search-bar, .tracking-updates p, .checkboxes label {
+      font-family: 'Calibri', sans-serif;
+      font-size: 16px;
+      color: #131C26;
+    }
+    nav a, .footer-section a, .subscribe button, .view-cart, .order-status-section button {
+      font-family: 'Roboto', sans-serif;
+      font-size: 16px;
+      font-weight: bold;
+    }
+    .footer-bottom { font-family: 'Comfortaa', cursive; font-size: 11px; }
+
+    /* Header & Nav */
     header {
-      position: sticky;
-      top: 0;
-      background: #fff;
-      border-bottom: 1px solid #ccc;
+      position: sticky; top: 0;
+      background: #2E4057;
+      border-bottom: 1px solid #C7B65E;
       z-index: 1000;
     }
     .branding {
       position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
+      display: flex; align-items: center;
       padding: 10px 20px;
     }
-    .branding .logo {
-      height: 50px;
-      width: auto;
-    }
+    .branding .logo { height: 50px; }
     .branding h1 {
       position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      font-size: 1.6rem;
+      left: 50%; transform: translateX(-50%);
       margin: 0;
     }
-
-    /* Navigation */
     nav {
-      background: #f8f8f8;
+      background: #2E4057;
       padding: 8px 20px;
     }
     nav a {
       margin: 0 15px;
+      color: #FFF7EE;
       text-decoration: none;
-      color: #333;
-      font-weight: bold;
     }
     nav a:hover { text-decoration: underline; }
 
-    /* Page container */
-    .container {
-      max-width: 1200px;
-      margin: 20px auto;
-      padding: 0 20px;
-    }
+    /* Container */
+    .container { max-width: 1200px; margin: 20px auto; padding: 0 20px; }
 
-    /* Banner placeholder */
+    /* Banner */
     .banner-image {
-      width: 100%;
-      height: 300px;
-      background: #e0e0e0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #666;
-      font-size: 1.2rem;
-      margin-bottom: 20px;
-      border: 1px solid #ccc;
+      width: 100%; height: 300px;
+      background: #C7B65E;
+      display: flex; align-items: center; justify-content: center;
+      color: #FFF7EE; font-size: 1.2rem;
+      margin-bottom: 20px; border-radius: 4px;
     }
 
     /* Info box */
     .info-box {
-      max-width: 600px;
-      margin: 0 auto 20px;
-      padding: 15px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      background: #fafafa;
-      font-size: 1rem;
-      color: #333;
-      text-align: center;
+      max-width: 600px; margin: 0 auto 20px;
+      padding: 15px; background: #FFF7EE;
+      border: 1px solid #2E4057; border-radius: 4px;
     }
 
     /* Search bar */
     .search-bar {
-      width: 100%;
-      max-width: 600px;
-      padding: 10px;
-      font-size: 1rem;
-      margin: 10px auto 30px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
+      width: 100%; max-width: 600px;
+      padding: 10px; margin: 10px auto 30px;
+      border: 1px solid #C7B65E; border-radius: 4px;
     }
 
-    /* Order status section (hidden by default) */
+    /* Order status section */
     .order-status-section {
-      display: none;
-      margin-top: 20px;
+      display: none; margin-top: 20px;
     }
-    .order-status-section h2 {
-      margin-bottom: 20px;
-    }
+    .order-status-section h2 { margin-bottom: 20px; }
 
     /* Checkboxes layout */
     .checkboxes {
-      display: flex;
-      justify-content: space-around;
-      max-width: 800px;
-      margin: 0 auto 30px;
+      display: flex; justify-content: space-around;
+      max-width: 800px; margin: 0 auto 30px;
     }
     .checkboxes label {
-      font-size: 0.9rem;
-      display: flex;
-      align-items: center;
-      gap: 5px;
+      display: flex; align-items: center; gap: 5px;
     }
 
     /* Tracking updates box */
     .tracking-updates {
-      max-width: 400px;
-      margin: 0 auto;
-      padding: 15px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      background: #fafafa;
+      max-width: 400px; margin: 0 auto;
+      padding: 15px; background: #FFF7EE;
+      border: 1px solid #2E4057; border-radius: 4px;
       text-align: left;
     }
-    .tracking-updates h3 {
-      margin-bottom: 10px;
-      font-size: 1rem;
-    }
-    .tracking-updates p {
-      margin: 6px 0;
-      font-size: 0.95rem;
-    }
+    .tracking-updates h3 { margin-bottom: 10px; }
 
+    /* Footer */
     footer {
-  background: #333;
-  color: #fff;
-  margin-top: 40px;
-  padding: 30px 20px;
-}
-
-.footer-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 30px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.footer-section {
-  flex: 1 1 200px;
-}
-
-.footer-section h4 {
-  margin-bottom: 10px;
-  font-size: 1.1rem;
-}
-
-.subscribe form {
-  display: flex;
-  gap: 10px;
-}
-
-.subscribe input {
-  flex: 1;
-  padding: 8px;
-  border: none;
-  border-radius: 4px;
-}
-
-.subscribe button {
-  padding: 8px 12px;
-  border: none;
-  background: #555;
-  color: #fff;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.subscribe button:hover {
-  background: #444;
-}
-
-.social a {
-  margin-right: 10px;
-  display: inline-block;
-}
-
-.social img {
-  width: 24px;
-  height: 24px;
-}
-
-.nav a {
-  display: block;
-  margin-bottom: 6px;
-  color: #fff;
-  text-decoration: none;
-}
-
-.nav a:hover {
-  text-decoration: underline;
-}
-
-.footer-bottom {
-  text-align: center;
-  margin-top: 20px;
-  font-size: 0.9rem;
-  opacity: 0.8;
-}
-
+      background: #2E4057; color: #FFF7EE;
+      padding: 30px 20px; margin-top: 40px;
+    }
+    .footer-container {
+      display: flex; flex-wrap: wrap;
+      justify-content: space-between; gap: 30px;
+      max-width: 1200px; margin: 0 auto;
+    }
+    .footer-section { flex: 1 1 200px; }
+    .footer-section h4 {
+      font-family: 'Times New Roman', serif;
+      font-size: 30px; font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .subscribe form { display: flex; gap: 10px; }
+    .subscribe input {
+      flex: 1; padding: 8px;
+      border: 1px solid #C7B65E; border-radius: 4px;
+    }
+    .subscribe button {
+      background: #EE583F; color: #FFF7EE;
+      border: none; padding: 8px 12px;
+      border-radius: 4px; cursor: pointer;
+    }
+    .social a { margin-right: 10px; display: inline-block; }
+    .social img { width: 24px; height: 24px; }
+    .nav a { display: block; margin-bottom: 6px; color: #FFF7EE; }
+    .footer-bottom { text-align: center; margin-top: 20px; opacity: 0.8; }
   </style>
 </head>
 <body>
 
   <header>
     <div class="branding">
-      <img src="Book Haven Bookstore.png" alt="Book Haven Logo" class="logo">
+      <img src="Book Haven Bookstore.png" alt="Logo" class="logo">
       <h1>Order Status</h1>
     </div>
     <nav>
@@ -237,19 +159,14 @@
   </header>
 
   <div class="container">
-    <!-- Banner -->
     <div class="banner-image">Promo Image</div>
-
-    <!-- Prompt -->
     <div class="info-box">
       If you’ve purchased one of our books, thank you!<br>
       Please enter the order number below and we can show you the status.
     </div>
 
-    <!-- Search bar -->
     <input type="text" class="search-bar" placeholder="Enter order number">
 
-    <!-- Conditionally shown order status -->
     <div class="order-status-section">
       <h2>Order Status</h2>
       <div class="checkboxes">
@@ -268,49 +185,40 @@
   </div>
 
   <script>
-    const searchInput = document.querySelector('.search-bar');
-    const statusSection = document.querySelector('.order-status-section');
-
-    searchInput.addEventListener('input', () => {
-      if (searchInput.value.trim() !== '') {
-        statusSection.style.display = 'block';
-      } else {
-        statusSection.style.display = 'none';
-      }
+    const input = document.querySelector('.search-bar');
+    const status = document.querySelector('.order-status-section');
+    input.addEventListener('input', () => {
+      status.style.display = input.value.trim() ? 'block' : 'none';
     });
   </script>
-    <footer>
-        <div class="footer-container">
-          <!-- Newsletter -->
-          <div class="footer-section subscribe">
-            <h4>Subscribe to our newsletter</h4>
-            <form>
-              <input type="email" placeholder="Your email address" required>
-              <button type="submit">Subscribe</button>
-            </form>
-          </div>
-    
-          <!-- Social Media -->
-          <div class="footer-section social">
-            <h4>Follow us</h4>
-            <a href="#" aria-label="Facebook"><img src="icon-facebook.svg" alt=""></a>
-            <a href="#" aria-label="Twitter"><img src="icon-twitter.svg" alt=""></a>
-            <a href="#" aria-label="Instagram"><img src="icon-instagram.svg" alt=""></a>
-          </div>
-    
-          <!-- Footer Nav -->
-          <div class="footer-section nav">
-            <h4>Quick Links</h4>
-            <a href="index.html">Home</a>
-            <a href="about-us.html">About Us</a>
-            <a href="catalog.html">Catalog</a>
-            <a href="order-status.html">Order Status</a>
-          </div>
-        </div>
-    
-        <div class="footer-bottom">
-          &copy; 2025 Book Haven Bookstore. All rights reserved.
-        </div>
-      </footer>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section subscribe">
+        <h4>Subscribe to our newsletter</h4>
+        <form>
+          <input type="email" placeholder="Your email address" required>
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+      <div class="footer-section social">
+        <h4>Follow us</h4>
+        <a href="#" aria-label="Facebook"><img src="icon-facebook.svg" alt=""></a>
+        <a href="#" aria-label="Twitter"><img src="icon-twitter.svg" alt=""></a>
+        <a href="#" aria-label="Instagram"><img src="icon-instagram.svg" alt=""></a>
+      </div>
+      <div class="footer-section nav">
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="about-us.html">About Us</a>
+        <a href="catalog.html">Catalog</a>
+        <a href="order-status.html">Order Status</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2025 Book Haven Bookstore. All rights reserved.
+    </div>
+  </footer>
+
 </body>
 </html>
