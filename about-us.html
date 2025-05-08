@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About Us - Book Haven Bookstore</title>
+  <style>
+    /* Reset & global */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.4;
+      text-align: center;
+      color: #333;
+    }
+
+    /* Sticky header */
+    header {
+      position: sticky;
+      top: 0;
+      background: #fff;
+      border-bottom: 1px solid #ccc;
+      z-index: 1000;
+    }
+    .branding {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 10px 20px;
+    }
+    .branding .logo {
+      height: 50px;
+      width: auto;
+    }
+    .branding h1 {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 1.6rem;
+      margin: 0;
+    }
+
+    /* Navigation */
+    nav {
+      background: #f8f8f8;
+      padding: 8px 20px;
+    }
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* Container */
+    .container {
+      max-width: 1200px;
+      margin: 20px auto;
+      padding: 0 20px;
+    }
+
+    /* Banner placeholder */
+    .banner-image {
+      width: 100%;
+      height: 300px;
+      background: #e0e0e0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #666;
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+    }
+
+    /* Info boxes */
+    .location-box,
+    .origins-box {
+      max-width: 600px;
+      margin: 20px auto;
+      padding: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      background: #fafafa;
+      text-align: left;
+      font-size: 1rem;
+      color: #333;
+    }
+    .origins-box p {
+      margin: 10px 0;
+    }
+
+    /* Staff grid */
+    .staff-section h2 {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      font-size: 1.4rem;
+    }
+    .staff-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px 40px;
+      margin-bottom: 40px;
+    }
+    .staff-member {
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+    }
+    .staff-member .photo {
+      flex-shrink: 0;
+      width: 120px;
+      height: 120px;
+      background: #ddd;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #666;
+      font-size: 0.9rem;
+      border: 1px solid #ccc;
+    }
+    .staff-member .details {
+      text-align: left;
+      flex: 1;
+    }
+    .staff-member .details p {
+      margin: 6px 0;
+    }
+
+    /* Feedback form */
+    .feedback-section {
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      background: #fafafa;
+      text-align: left;
+    }
+    .feedback-section h3 {
+      margin-bottom: 15px;
+      font-size: 1.3rem;
+      text-align: center;
+    }
+    .feedback-section form {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .feedback-section input,
+    .feedback-section textarea,
+    .feedback-section button {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1rem;
+    }
+    .feedback-section button {
+      background: #333;
+      color: #fff;
+      cursor: pointer;
+      border: none;
+    }
+    .feedback-section button:hover {
+      background: #555;
+    }
+
+    footer {
+  background: #333;
+  color: #fff;
+  margin-top: 40px;
+  padding: 30px 20px;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-section {
+  flex: 1 1 200px;
+}
+
+.footer-section h4 {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+.subscribe form {
+  display: flex;
+  gap: 10px;
+}
+
+.subscribe input {
+  flex: 1;
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+}
+
+.subscribe button {
+  padding: 8px 12px;
+  border: none;
+  background: #555;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.subscribe button:hover {
+  background: #444;
+}
+
+.social a {
+  margin-right: 10px;
+  display: inline-block;
+}
+
+.social img {
+  width: 24px;
+  height: 24px;
+}
+
+.nav a {
+  display: block;
+  margin-bottom: 6px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="branding">
+      <img src="Book Haven Bookstore.png" alt="Book Haven Logo" class="logo">
+      <h1>About Us</h1>
+    </div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about-us.html">About Us</a>
+        <a href="catalog.html">Catalog</a>
+        <a href="order-status.html">Order Status</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <!-- Top banner -->
+    <div class="banner-image">Promo Image</div>
+
+    <!-- Location & directions -->
+    <div class="location-box">
+      <strong>We're located in the following location:</strong><br>
+      Address1<br><br>
+      <strong>Here are the directions:</strong><br>
+      Directions
+    </div>
+
+    <!-- Second banner -->
+    <div class="banner-image">Promo Image</div>
+
+    <!-- Origins section -->
+    <div class="origins-box">
+      <strong>Our Origins:</strong>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</p>
+    </div>
+
+    <!-- Third banner -->
+    <div class="banner-image">Promo Image</div>
+
+    <!-- Our Staff -->
+    <section class="staff-section">
+      <h2>Our Staff</h2>
+      <div class="staff-grid">
+        <!-- Staff 1 -->
+        <div class="staff-member">
+          <div class="photo">Staff Pic</div>
+          <div class="details">
+            <p><strong>Staff 1 Info</strong></p>
+            <p>Staff 1 Book Recommendations</p>
+          </div>
+        </div>
+        <!-- Staff 2 -->
+        <div class="staff-member">
+          <div class="photo">Staff Pic</div>
+          <div class="details">
+            <p><strong>Staff 2 Info</strong></p>
+            <p>Staff 2 Book Recommendations</p>
+          </div>
+        </div>
+        <!-- Staff 3 -->
+        <div class="staff-member">
+          <div class="photo">Staff Pic</div>
+          <div class="details">
+            <p><strong>Staff 3 Info</strong></p>
+            <p>Staff 3 Book Recommendations</p>
+          </div>
+        </div>
+        <!-- Staff 4 -->
+        <div class="staff-member">
+          <div class="photo">Staff Pic</div>
+          <div class="details">
+            <p><strong>Staff 4 Info</strong></p>
+            <p>Staff 4 Book Recommendations</p>
+          </div>
+        </div>
+        <!-- Staff 5 -->
+        <div class="staff-member">
+          <div class="photo">Staff Pic</div>
+          <div class="details">
+            <p><strong>Staff 5 Info</strong></p>
+            <p>Staff 5 Book Recommendations</p>
+          </div>
+        </div>
+        <!-- Staff 6 -->
+        <div class="staff-member">
+          <div class="photo">Staff Pic</div>
+          <div class="details">
+            <p><strong>Staff 6 Info</strong></p>
+            <p>Staff 6 Book Recommendations</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- New: Feedback & Custom Orders Form -->
+    <section class="feedback-section">
+        <h3>Client Feedback & Custom Orders</h3>
+        <form>
+          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="email" name="email" placeholder="Your Email" required>
+          <textarea name="message" rows="5" placeholder="Your Feedback or Custom Order Request" required></textarea>
+          <button type="submit">Submit</button>
+        </form>
+      </section>
+  </div>
+  <footer>
+    <div class="footer-container">
+      <!-- Newsletter -->
+      <div class="footer-section subscribe">
+        <h4>Subscribe to our newsletter</h4>
+        <form>
+          <input type="email" placeholder="Your email address" required>
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+
+      <!-- Social Media -->
+      <div class="footer-section social">
+        <h4>Follow us</h4>
+        <a href="#" aria-label="Facebook"><img src="icon-facebook.svg" alt=""></a>
+        <a href="#" aria-label="Twitter"><img src="icon-twitter.svg" alt=""></a>
+        <a href="#" aria-label="Instagram"><img src="icon-instagram.svg" alt=""></a>
+      </div>
+
+      <!-- Footer Nav -->
+      <div class="footer-section nav">
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="about-us.html">About Us</a>
+        <a href="catalog.html">Catalog</a>
+        <a href="order-status.html">Order Status</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      &copy; 2025 Book Haven Bookstore. All rights reserved.
+    </div>
+  </footer>
+</body>
+</html>
