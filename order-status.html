@@ -219,6 +219,12 @@
       &copy; 2025 Book Haven Bookstore. All rights reserved.
     </div>
   </footer>
-
+  <script>
+    // Subscribe form alert
+    document.querySelector('.subscribe form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Thanks for subscribing to our newsletter!');
+    });
+  </script>
 </body>
 </html>

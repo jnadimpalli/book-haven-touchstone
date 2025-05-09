@@ -20,7 +20,7 @@
     h2 { font-family: 'Times New Roman', serif; font-size: 30px; font-weight: bold; }
     h3 { font-family: 'Impact', sans-serif; font-size: 25px; font-weight: bold; }
     h4 { font-family: 'Calibri', sans-serif; font-size: 20px; font-weight: normal; }
-    p, li, .origins-box p, .location-box, .feedback-section input, .feedback-section textarea { font-family: 'Calibri', sans-serif; font-size: 16px; }
+    p, li, .origins-box p, .location-box { font-family: 'Calibri', sans-serif; font-size: 16px; }
     nav a, .subscribe button, .feedback-section button { font-family: 'Roboto', sans-serif; font-size: 16px; font-weight: bold; }
     .footer-bottom { font-family: 'Comfortaa', cursive; font-size: 11px; }
     /* Header & Nav */
@@ -130,14 +130,14 @@
       </div>
     </section>
     <section class="feedback-section">
-      <h3>Client Feedback & Custom Orders</h3>
-      <form>
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <textarea name="message" rows="5" placeholder="Your Feedback or Custom Order Request" required></textarea>
-        <button type="submit">Submit</button>
-      </form>
-    </section>
+        <h3>Client Feedback & Custom Orders</h3>
+        <form id="customOrderForm">
+          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="email" name="email" placeholder="Your Email" required>
+          <textarea name="message" rows="5" placeholder="Your Feedback or Custom Order Request" required></textarea>
+          <button type="submit">Submit</button>
+        </form>
+      </section>
   </div>
 
   <footer>
@@ -165,5 +165,28 @@
     </div>
     <div class="footer-bottom">&copy; 2025 Book Haven Bookstore. All rights reserved.</div>
   </footer>
+  <script>
+    // Feedback form alert & store to localStorage
+    const form = document.getElementById('customOrderForm');
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const name = this.name.value;
+      const email = this.email.value;
+      const message = this.message.value;
+      // Retrieve existing orders
+      const orders = JSON.parse(localStorage.getItem('customOrders') || '[]');
+      // Add new order
+      orders.push({ name, email, message, date: new Date().toISOString() });
+      localStorage.setItem('customOrders', JSON.stringify(orders));
+      alert("Thank you for your feedback! We'll be in touch soon.");
+      form.reset();
+    });
+
+    // Subscribe form alert
+    document.querySelector('.subscribe form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Thanks for subscribing to our newsletter!');
+    });
+  </script>
 </body>
 </html>
